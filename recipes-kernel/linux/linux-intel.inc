@@ -24,3 +24,4 @@ COMPATIBLE_MACHINE ?= "(intel-corei7-64|intel-core2-32)"
 
 KERNEL_FEATURES_append = " ${KERNEL_EXTRA_FEATURES}"
 KERNEL_FEATURES_append = " ${@bb.utils.contains("TUNE_FEATURES", "mx32", " cfg/x32.scc", "" ,d)}"
+unset RECIPE_NO_UPDATE_REASON
